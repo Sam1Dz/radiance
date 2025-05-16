@@ -1,6 +1,6 @@
 {
   "name": "radiance",
-  "version": "2025.516.1",
+  "version": "2025.516.2",
   "private": true,
   "engines": {
     "node": ">=18.18",
