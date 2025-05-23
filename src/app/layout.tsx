@@ -2,7 +2,7 @@ import React from 'react';
 import { Roboto_Mono, JetBrains_Mono } from 'next/font/google';
 
 /* COMPONENTS */
-import { ThemeProvider } from '@/components/theme-provider';
+import { Provider } from '@/components/theme/provider';
 
 import './globals.css';
 
@@ -23,14 +23,14 @@ export default function RootLayout({ children }: ComponentsChildrenReq) {
   return (
     <html lang="id" suppressHydrationWarning>
       <body className={`${robotoMono.variable} ${jetBrainsMono.variable}`}>
-        <ThemeProvider
+        <Provider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
           {children}
-        </ThemeProvider>
+        </Provider>
       </body>
     </html>
   );
