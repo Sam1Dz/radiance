@@ -2,6 +2,7 @@
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant hover (&:hover);
 
 @theme inline {
   --color-background: var(--background);
@@ -216,7 +217,10 @@
 }
 
 @layer components {
-  .link {
+  .link-primary {
     @apply hover:bg-primary hover:text-primary-foreground underline;
+  }
+  .link-secondary {
+    @apply hover:bg-secondary hover:text-secondary-foreground underline;
   }
 }

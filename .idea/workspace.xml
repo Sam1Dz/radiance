@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fa3a6de-f0a3-40ef-9da6-5485d3bdcda3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(root)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/theme-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme/provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/topic-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/topic-card.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +102,7 @@
       <recent name="D:\Projects\Applications\Standalone\radiance\src\app\(app)" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Next.js: server-side">
+  <component name="RunManager" selected="npm.build">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -161,10 +158,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.prettier" />
-        <item itemvalue="npm.outdated" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.prettier" />
         <item itemvalue="npm.lint" />
+        <item itemvalue="npm.outdated" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +187,8 @@
       <workItem from="1747638820652" duration="10000" />
       <workItem from="1747917369476" duration="4756000" />
       <workItem from="1747928296752" duration="5937000" />
-      <workItem from="1747971952800" duration="14606000" />
+      <workItem from="1747971952800" duration="15134000" />
+      <workItem from="1748002743124" duration="7496000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project with base files and configuration&#10;&#10;Added initial project setup files, including `.gitignore`, `eslint`, `prettier`, `next.js` configuration, Tailwind CSS, and TypeScript support. Defined structure and configurations for efficient development and styling, such as `globals.css`, `layout.tsx`, and `package.json`.">
       <option name="closed" value="true" />
@@ -208,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747392428700</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactor layout and components; add UI utilities.&#10;&#10;Reorganized layout structure and modularized components, moving Hero and related logic. Added reusable UI components such as Badge, Button, Card, Separator, and TopicCard for improved maintainability and extensibility. Updated dependencies to include Radix UI utilities and relevant packages.">
+      <option name="closed" value="true" />
+      <created>1747997408846</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747997408846</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +231,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="canary" />
                       </list>
                     </value>
                   </entry>
@@ -244,6 +250,7 @@
     <MESSAGE value="Initialize project with base files and configuration&#10;&#10;Added initial project setup files, including `.gitignore`, `eslint`, `prettier`, `next.js` configuration, Tailwind CSS, and TypeScript support. Defined structure and configurations for efficient development and styling, such as `globals.css`, `layout.tsx`, and `package.json`." />
     <MESSAGE value="Refactor fonts and UI structure; remove unused assets.&#10;&#10;Replaced Geist fonts with Roboto Mono and JetBrains Mono for improved typography consistency. Updated color scheme and layout styling, and streamlined page components by introducing a `Hero` component. Removed unused SVG assets and redundant metadata for better project organization." />
     <MESSAGE value="Refactor layout and introduce Hero component&#10;&#10;Removed unused SVG assets and incorporated a new Hero component to streamline the homepage design. Updated fonts and global styles for consistency, along with metadata changes for better clarity. Adjusted dark mode color schemes for enhanced readability." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor layout and introduce Hero component&#10;&#10;Removed unused SVG assets and incorporated a new Hero component to streamline the homepage design. Updated fonts and global styles for consistency, along with metadata changes for better clarity. Adjusted dark mode color schemes for enhanced readability." />
+    <MESSAGE value="Refactor layout and components; add UI utilities.&#10;&#10;Reorganized layout structure and modularized components, moving Hero and related logic. Added reusable UI components such as Badge, Button, Card, Separator, and TopicCard for improved maintainability and extensibility. Updated dependencies to include Radix UI utilities and relevant packages." />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

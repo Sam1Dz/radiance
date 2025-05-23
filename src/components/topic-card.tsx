@@ -13,8 +13,9 @@ import {
 
 interface TopicCardProps {
   title: string;
-  description: string;
+  description?: string;
   topics?: number;
+  isDisabled?: boolean;
   className?: string;
 }
 
@@ -22,12 +23,15 @@ export default function TopicCard({
   title,
   description,
   topics,
+  isDisabled = false,
   className,
 }: TopicCardProps) {
   return (
     <Card
       className={clsx(
-        'hover:bg-accent hover:border-accent-foreground cursor-pointer',
+        !isDisabled
+          ? 'hover:bg-accent hover:border-accent-foreground cursor-pointer'
+          : 'border-card cursor-not-allowed',
         className,
       )}
     >
@@ -35,15 +39,19 @@ export default function TopicCard({
         <CardTitle className="typography-body-md md:typography-title-md font-mono font-semibold">
           {title}
         </CardTitle>
-        <CardDescription className="typography-label-sm md:typography-label-sm font-medium">
-          {description}
-        </CardDescription>
+        {description && (
+          <CardDescription className="typography-label-sm md:typography-label-sm font-medium">
+            {description}
+          </CardDescription>
+        )}
       </CardHeader>
-      <CardFooter className="flex justify-end">
-        <Badge variant="secondary" className="typography-label-sm">
-          {topics}&nbsp;Topik
-        </Badge>
-      </CardFooter>
+      {topics && (
+        <CardFooter className="flex justify-end">
+          <Badge variant="secondary" className="typography-label-sm">
+            {topics}&nbsp;Topik
+          </Badge>
+        </CardFooter>
+      )}
     </Card>
   );
 }

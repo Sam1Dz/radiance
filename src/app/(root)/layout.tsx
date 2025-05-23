@@ -1,3 +1,8 @@
+import React from 'react';
+
+/* COMPONENTS */
+import Footer from '@/components/footer';
+
 /* TYPES */
 import type { Metadata } from 'next';
 import type { ComponentsChildrenReq } from '@/type';
@@ -9,5 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function AppLayout({ children }: ComponentsChildrenReq) {
-  return children;
+  return (
+    <React.Fragment>
+      {children}
+      <Footer />
+    </React.Fragment>
+  );
 }

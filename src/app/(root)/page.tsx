@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <section>
         <SeparatorText
-          text="Role Based Roadmap"
+          text="Role Based"
           color="foreground"
           overrideStyle={{
             base: 'mx-auto max-w-7xl px-4 xl:px-0',
@@ -21,20 +21,13 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-4">
             <TopicCard
               title="Frontend Developer"
-              description="Panduan untuk menjadi modern frontend developer"
+              description="Rangkuman untuk menjadi modern frontend developer"
               topics={115}
               className="col-span-3 md:col-span-1"
             />
             <TopicCard
-              title="Backend Developer"
-              description="Panduan untuk menjadi modern backend developer"
-              topics={137}
-              className="col-span-3 md:col-span-1"
-            />
-            <TopicCard
-              title="Full Stack Developer"
-              description="Panduan untuk menjadi modern full stack developer"
-              topics={37}
+              isDisabled
+              title="Segera Hadir..."
               className="col-span-3 md:col-span-1"
             />
           </div>
