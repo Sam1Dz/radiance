@@ -1,57 +1,74 @@
-import { clsx } from 'clsx';
+import React from 'react';
+import Link from 'next/link';
 
 /* COMPONENTS */
 // shadcn/ui
-import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
+import { RippleButton } from '@/components/ui/ripple-button';
 import {
   Card,
-  CardDescription,
+  CardTitle,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardContent,
+  CardDescription,
 } from '@/components/ui/card';
 
-interface TopicCardProps {
-  title: string;
-  description?: string;
-  topics?: number;
-  isDisabled?: boolean;
+/* TYPES */
+import { Topics } from '@/type';
+
+interface TopicCardProps extends Topics {
   className?: string;
 }
 
 export default function TopicCard({
+  uid,
   title,
   description,
   topics,
-  isDisabled = false,
   className,
 }: TopicCardProps) {
   return (
-    <Card
-      className={clsx(
-        !isDisabled
-          ? 'hover:bg-accent hover:border-accent-foreground cursor-pointer'
-          : 'border-card cursor-not-allowed',
-        className,
-      )}
-    >
-      <CardHeader>
+    <Card className={className}>
+      <CardHeader className="flex-1">
         <CardTitle className="typography-body-md md:typography-title-md font-mono font-semibold">
           {title}
         </CardTitle>
         {description && (
-          <CardDescription className="typography-label-sm md:typography-label-sm font-medium">
+          <CardDescription className="typography-label-sm font-medium">
             {description}
           </CardDescription>
         )}
       </CardHeader>
       {topics && (
-        <CardFooter className="flex justify-end">
-          <Badge variant="secondary" className="typography-label-sm">
-            {topics}&nbsp;Topik
-          </Badge>
-        </CardFooter>
+        <CardContent className="typography-label-sm font-normal">
+          {topics.map(({ uid, title }, index) => {
+            if (index < 3) {
+              return (
+                <React.Fragment key={uid}>
+                  <Separator />
+                  <p className="py-1">{title}</p>
+                </React.Fragment>
+              );
+            }
+          })}
+          {topics.length > 3 && (
+            <React.Fragment>
+              <Separator />
+              <p className="py-1 text-right">
+                ...dan <strong>{topics.length - 3} Topik</strong> lainnya
+              </p>
+            </React.Fragment>
+          )}
+        </CardContent>
       )}
+      <CardFooter>
+        <Link passHref href={`/topic/${uid}`} className="w-full">
+          <RippleButton className="w-full cursor-pointer">
+            Pelajari Topik!
+          </RippleButton>
+        </Link>
+      </CardFooter>
     </Card>
   );
 }

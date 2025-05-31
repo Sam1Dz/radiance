@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
-import { clsx } from 'clsx';
 
 import { cn } from '@/lib/utils';
 
@@ -45,15 +44,14 @@ function SeparatorText({
     <div className="relative">
       <div className="absolute inset-0 flex items-center">
         <Separator
-          className={clsx(
-            '',
+          className={cn(
             color === 'foreground' && 'bg-foreground',
             overrideStyle?.separator,
           )}
         />
       </div>
       <div
-        className={clsx(
+        className={cn(
           'typography-label-sm md:typography-label-md relative px-6 font-medium xl:px-3',
           position === 'left'
             ? 'text-left'
@@ -64,7 +62,7 @@ function SeparatorText({
         )}
       >
         <span
-          className={clsx(
+          className={cn(
             'bg-background border-1 px-2',
             color === 'foreground' ? 'border-foreground' : 'border-border',
             overrideStyle?.text,

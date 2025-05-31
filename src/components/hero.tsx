@@ -1,6 +1,4 @@
-import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -24,19 +22,6 @@ export default function Hero() {
             berbagai sumber di internet dengan bantuan AI untuk membantumu
             menentukan jalur karir teknologimu
           </p>
-          <div className="mt-8 px-3 py-1 ring-1">
-            <span className="typography-label-sm font-medium">
-              Isi konten dan topik bersumber dan terinspirasi dari
-              komunitas&nbsp;
-              <Link
-                href="https://roadmap.sh/"
-                target="_blank"
-                className="link-primary"
-              >
-                roadmap.sh
-              </Link>
-            </span>
-          </div>
         </div>
       </div>
     </section>

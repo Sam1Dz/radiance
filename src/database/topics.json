@@ -1,0 +1,55 @@
+[
+  {
+    "uid": "cfb1325e",
+    "selector": "c13e-fd",
+    "title": "Frontend Developer",
+    "description": "Rangkuman untuk menjadi modern frontend developer",
+    "topics": [
+      {
+        "uid": "589b7816",
+        "selector": "5b76-i",
+        "title": "Internet"
+      },
+      {
+        "uid": "0a462d74",
+        "selector": "0624-h",
+        "title": "HTML"
+      },
+      {
+        "uid": "b9e84ca2",
+        "selector": "b842-c",
+        "title": "CSS"
+      },
+      {
+        "uid": "29d3e3f8",
+        "selector": "23e8-j",
+        "title": "JavaScript"
+      },
+      {
+        "uid": "89a56367",
+        "selector": "8567-vcs",
+        "title": "Version Control Systems"
+      },
+      {
+        "uid": "d1042493",
+        "selector": "d423-rhs",
+        "title": "VCS Hosting"
+      },
+      {
+        "uid": "98387502",
+        "selector": "9872-pm",
+        "title": "Package Managers"
+      },
+      {
+        "uid": "3bd6617e",
+        "selector": "366e-paf",
+        "title": "Pick a Framework"
+      },
+      {
+        "uid": "7bc3ff55",
+        "selector": "73f5-wc",
+        "title": "Writing CSS"
+      }
+    ]
+  }
+]
