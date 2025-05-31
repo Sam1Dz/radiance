@@ -1,33 +1,18 @@
-'use client';
-
-import React from 'react';
-
 /* COMPONENTS */
-import Hero from '@/components/hero';
+import HeroMain from '@/components/hero-main';
 import TopicCard from '@/components/topic-card';
 // shadcn/ui
 import { SeparatorText } from '@/components/ui/separator';
 
 /* DATABASE */
-import { readTopics } from '@/database/utils';
+import { getRawData } from '@/database/utils';
 
-/* TYPES */
-import type { Topics } from '@/type';
+const data = getRawData();
 
 export default function Home() {
-  const [topics, setTopics] = React.useState<Topics[]>([]);
-
-  React.useEffect(() => {
-    const getTopics = async () => {
-      const data = await readTopics();
-      setTopics(data);
-    };
-    getTopics().then(() => null);
-  }, []);
-
   return (
-    <>
-      <Hero />
+    <main>
+      <HeroMain />
       <section>
         <SeparatorText
           text="Role Based"
@@ -39,16 +24,17 @@ export default function Home() {
         />
         <div className="mx-auto max-w-7xl px-4 py-8 md:py-12 lg:py-14 xl:px-0">
           <div className="grid grid-cols-3 gap-4">
-            {topics.map((topic) => (
+            {data.role.map((topic) => (
               <TopicCard
                 key={topic.uid}
                 {...topic}
+                link={`/t/${topic.uid}`}
                 className="col-span-3 md:col-span-1"
               />
             ))}
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

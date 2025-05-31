@@ -217,6 +217,9 @@
 }
 
 @layer components {
+  .hero-container {
+    @apply mx-auto px-6 lg:px-8;
+  }
   .link-primary {
     @apply hover:bg-primary hover:text-primary-foreground underline;
   }

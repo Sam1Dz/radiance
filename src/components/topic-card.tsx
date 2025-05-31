@@ -18,19 +18,20 @@ import {
 import { Topics } from '@/type';
 
 interface TopicCardProps extends Topics {
+  link?: string;
   className?: string;
 }
 
 export default function TopicCard({
-  uid,
   title,
   description,
   topics,
+  link,
   className,
 }: TopicCardProps) {
   return (
     <Card className={className}>
-      <CardHeader className="flex-1">
+      <CardHeader>
         <CardTitle className="typography-body-md md:typography-title-md font-mono font-semibold">
           {title}
         </CardTitle>
@@ -40,6 +41,7 @@ export default function TopicCard({
           </CardDescription>
         )}
       </CardHeader>
+      <div className="grow" />
       {topics && (
         <CardContent className="typography-label-sm font-normal">
           {topics.map(({ uid, title }, index) => {
@@ -56,19 +58,25 @@ export default function TopicCard({
             <React.Fragment>
               <Separator />
               <p className="py-1 text-right">
-                ...dan <strong>{topics.length - 3} Topik</strong> lainnya
+                ...dan{' '}
+                <strong className="text-primary">
+                  {topics.length - 3} Topik
+                </strong>{' '}
+                lainnya
               </p>
             </React.Fragment>
           )}
         </CardContent>
       )}
-      <CardFooter>
-        <Link passHref href={`/topic/${uid}`} className="w-full">
-          <RippleButton className="w-full cursor-pointer">
-            Pelajari Topik!
-          </RippleButton>
-        </Link>
-      </CardFooter>
+      {link && (
+        <CardFooter>
+          <Link passHref href={link} className="w-full">
+            <RippleButton className="w-full cursor-pointer">
+              Pelajari Topik!
+            </RippleButton>
+          </Link>
+        </CardFooter>
+      )}
     </Card>
   );
 }

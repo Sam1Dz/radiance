@@ -10,7 +10,7 @@ import type { ComponentsChildrenReq } from '@/type';
 export const metadata: Metadata = {
   title: 'Radiance',
   description:
-    'Sebuah clone dari roadmap.sh. Berisi roadmap, artikel, dan panduan bagi developer untuk mengembangkan karir',
+    'Sumber rangkuman topik esensial untuk developer, dikompilasi dari berbagai sumber di internet dengan bantuan AI untuk membantumu menentukan jalur karir teknologimu',
 };
 
 export default function AppLayout({ children }: ComponentsChildrenReq) {

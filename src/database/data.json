@@ -1,0 +1,143 @@
+{
+  "version": "2025-05-31T11:01:35Z",
+  "role": [
+    {
+      "uid": "R-cfb1325e",
+      "selector": "R-c13e-fd",
+      "title": "Frontend Developer",
+      "description": "Rangkuman untuk menjadi modern frontend developer",
+      "topics": [
+        {
+          "uid": "589b7816",
+          "selector": "5b76-i",
+          "title": "Internet",
+          "description": "Bagaimana internet bekerja di balik layar, mulai dari HTTP, nama domain, hosting, DNS, hingga cara kerja browser dalam mengakses sebuah situs",
+          "topics": [
+            {
+              "uid": "836db0dc",
+              "selector": "8dbc-hdtiw",
+              "title": "Bagaimana Internet Bekerja"
+            },
+            {
+              "uid": "feb06a05",
+              "selector": "f065-wih",
+              "title": "Apa itu HTTP"
+            },
+            {
+              "uid": "eff16136",
+              "selector": "e166-widn",
+              "title": "Apa itu Nama Domain"
+            },
+            {
+              "uid": "6c993a70",
+              "selector": "6930-wih",
+              "title": "Apa itu Hosting"
+            },
+            {
+              "uid": "8a1559b5",
+              "selector": "8555-dahiw",
+              "title": "DNS dan cara kerjanya"
+            },
+            {
+              "uid": "702b8e26",
+              "selector": "7b86-bahtw",
+              "title": "Browser dan cara kerjanya"
+            }
+          ]
+        },
+        {
+          "uid": "0a462d74",
+          "selector": "0624-h",
+          "title": "HTML",
+          "description": "Konsep penting HTML mulai dari struktur dasar, elemen semantik, form & validasi, aksesibilitas, hingga praktik dasar SEO",
+          "topics": [
+            {
+              "uid": "6254ada8",
+              "selector": "64a8-hb",
+              "title": "Dasar HTML"
+            },
+            {
+              "uid": "ba386f84",
+              "selector": "b864-sh",
+              "title": "Semantic HTML"
+            },
+            {
+              "uid": "53215316",
+              "selector": "5156-fav",
+              "title": "Form dan Validasi"
+            },
+            {
+              "uid": "3acd6227",
+              "selector": "3d67-a",
+              "title": "Aksesibilitas"
+            },
+            {
+              "uid": "692855d6",
+              "selector": "6856-sb",
+              "title": "Dasar SEO"
+            }
+          ]
+        },
+        {
+          "uid": "b9e84ca2",
+          "selector": "b842-c",
+          "title": "CSS",
+          "description": "Konsep dasar CSS, teknik membuat layout yang rapi, dan prinsip desain responsif",
+          "topics": [
+            {
+              "uid": "a05bb19f",
+              "selector": "abbf-cb",
+              "title": "Dasar CSS"
+            },
+            {
+              "uid": "266f4e4c",
+              "selector": "2f4c-ml",
+              "title": "Membuat Layout"
+            },
+            {
+              "uid": "b744e848",
+              "selector": "b4e8-fav",
+              "title": "Responsive Design"
+            }
+          ]
+        },
+        {
+          "uid": "29d3e3f8",
+          "selector": "23e8-j",
+          "title": "JavaScript",
+          "description": "Dasar JavaScript, cara memanipulasi DOM, dan penggunaan Fetch API atau Ajax (XHR)",
+          "topics": [
+            {
+              "uid": "3d90d414",
+              "selector": "30d4-jb",
+              "title": "Dasar JavaScript"
+            },
+            {
+              "uid": "e4924e0d",
+              "selector": "e24d-dm",
+              "title": "Manipulasi DOM"
+            },
+            {
+              "uid": "d83011ca",
+              "selector": "d01a-faax",
+              "title": "Fetch API / Ajax (XHR)"
+            }
+          ]
+        },
+        {
+          "uid": "89a56367",
+          "selector": "8567-vcs",
+          "title": "Version Control Systems",
+          "description": "Konsep dasar Git untuk melacak perubahan kode, berkolaborasi dalam tim, dan mengelola versi proyek secara efisien",
+          "topics": [
+            {
+              "uid": "1d4d2eb7",
+              "selector": "1d27-g",
+              "title": "Git"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,40 @@
-'use server';
+import TopicsData from '@/database/data.json';
 
-import { existsSync } from 'fs';
-import { readFile } from 'fs/promises';
-
+/* TYPES */
 import type { Topics } from '@/type';
 
-const path = process.cwd() + '/src/database/topics.json';
+interface Database {
+  version: string;
+  role: Topics[];
+}
 
-export async function readTopics(): Promise<Topics[]> {
-  if (!existsSync(path)) {
-    return [];
+const database = JSON.parse(JSON.stringify(TopicsData)) as Database;
+
+export function getRawData() {
+  return database;
+}
+
+export function getTopics(selector: string) {
+  const splitUid = selector.split('_');
+  // const identifier = splitUid[0][0];
+
+  let currentData: Topics[] = database.role;
+  for (let i = 0; i < splitUid.length; i++) {
+    const uid = splitUid[i];
+    const found = currentData.find((topic) => topic.uid === uid);
+
+    if (!found) {
+      return currentData;
+    }
+
+    if (i === splitUid.length - 1) {
+      return found;
+    }
+
+    if (found && found.topics) {
+      currentData = found.topics;
+    } else {
+      return found;
+    }
   }
-
-  const file = await readFile(path, 'utf-8');
-  return JSON.parse(file);
 }
